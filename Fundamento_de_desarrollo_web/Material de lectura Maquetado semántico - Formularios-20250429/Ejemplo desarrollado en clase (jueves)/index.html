@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Clase 7 </title>
+    </head>
+    <body>
+        <form action="servidor.html" method="POST">
+            <label for="in-lastname">Apellido:</label>
+            <input name="lastname" id="in-lastname" >
+
+            <label for="in-dni">DNI:</label>
+            <input 
+                name="dni" 
+                id="in-dni" 
+                required 
+                type="number" 
+                min="10000000"
+                max="99999999"
+                step="1">
+
+            <label for="in-pass">Contraseña:</label>
+            <input type="password" name="password" id="in-pass">
+
+            <label for="in-terms">Acepto los términos y condiciones</label>
+            <input type="checkbox" id="in-terms" required>
+
+            <label for="in-subscribe">Suscribirme a las noticias</label>
+            <input type="checkbox" name="subscribe" id="in-subscribe">
+
+
+            <fieldset>
+                <legend>Seleccione cantidad de cuotas:</legend>
+                <label for="in-3cuotas">3 Cuotas</label>
+                <input type="radio" name="cuotes" value="3" id="in-3cuotas">
+
+                <label for="in-6cuotas">6 Cuotas</label>
+                <input type="radio" name="cuotes" value="6" id="in-6cuotas">
+
+                <label for="in-12cuotas">12 Cuotas</label>
+                <input type="radio" name="cuotes" value="12" id="in-12cuotas">
+            </fieldset>
+
+            <fieldset>
+                <legend>Seleccione una tarjeta:</legend>
+                <label for="in-visa"> Visa:</label>
+                <input type="radio" name="card" value="Visa" id="in-visa">
+                
+                <label for="in-mastercard"> Mastercard:</label>
+                <input type="radio" name="card" value="Mastercard" id="in-mastercard">
+            </fieldset>    
+
+            <button type="submit" >Enviar</button>
+            <button type="reset">Restablecer</button>
+            <button type="button" onclick="alert('Comprobando datos en arca...')">Comprobar dni</button>
+
+        </form>
+    </body>
+</html>
